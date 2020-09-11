@@ -14,6 +14,9 @@ body {
   height: auto;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .drawersimage {
@@ -33,7 +36,7 @@ body {
 
 .article {
     width: 445px;
-    margin: 38px 40px 32px 40px;
+    padding: 38px 40px 32px 40px;
 }
 
 h2 {
@@ -63,12 +66,6 @@ p {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-}
-
-.button {
-    display: flex;
-    flex-flow: row wrap;
-    margin-left: 100px;
 }
 
 .info {
@@ -169,13 +166,94 @@ p {
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 328px;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  } 
+  
+  .drawers {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: 328px;
+    max-height: auto; 
+  }
 
+  .drawersimage {
+    width: 328px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .article {
+    width: 100%;
+    padding: 40px 35px 20px 35px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .popup {
+    margin-left: 55px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: #edf1f8;
+    border-radius: 50%;    
+    align-self: center;
+  }
+
+  .social {
+    padding-top: 20px;
+  }
+
+  .shareicon {
+    max-width: 30px;
+    height: auto;
+  }
+  
+  .popup .popuptext {
+    visibility: hidden;
+    width: 330px;
+    height: 80px;
+    background-color: #4a546d;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -132%;
+    left: 50%;
+    margin-left: -275px;
+    margin-bottom: 15px;
+  }
+
+  .popup .show {
+    visibility: visible;
+  }
+
+  .popup .popuptext::after {
+    visibility: hidden;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
