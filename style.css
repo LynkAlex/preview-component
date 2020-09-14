@@ -97,6 +97,15 @@ p {
   align-self: center;
 }
 
+.shareiconbg {
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: #edf1f8;
+  border-radius: 50%;
+}
+
 .socialicons {
   display: flex;
   width: 15px;
@@ -223,6 +232,18 @@ p {
   .shareicon {
     max-width: 30px;
     height: auto;
+    z-index: 2;
+  }
+
+  .socialicons {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+  }
+
+  .shareiconbg {
+    z-index: 2;
   }
   
   .popup .popuptext {
@@ -233,7 +254,9 @@ p {
     color: #fff;
     text-align: center;
     border-radius: 0px 0px 10px 10px;
-    padding: 8px 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 80px;
     position: absolute;
     z-index: 1;
     bottom: -132%;
@@ -248,6 +271,12 @@ p {
 
   .popup .popuptext::after {
     visibility: hidden;
+  }
+
+  .popuptext {
+    display: flex;
+    justify-content: space-evenly;
+    
   }
 }
 
